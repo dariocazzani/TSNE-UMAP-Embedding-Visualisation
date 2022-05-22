@@ -13229,6 +13229,11 @@ a.ProjectionsPanel=b;document.registerElement(b.prototype.is,b)})(wc||(wc={}));
 
       <paper-icon-button id="labels3DMode" alt="Enable/disable 3D labels mode" toggles icon="font-download"></paper-icon-button>
       <paper-tooltip for="labels3DMode" position="bottom" animation-delay="0" fit-to-visible-bounds>Enable/disable 3D labels mode</paper-tooltip>
+      <div class="status-bar-panel">
+        <div class="status-bar-entry">Points: <span class="numDataPoints">Loading...</span></div>
+        <div class="status-bar-entry">Dimension: <span class="dim">Loading...</span></div>
+        <div id="status-bar" class="status-bar-entry" style="display: none;"></div>
+      </div>
       <div class="ink-fabs">
         <paper-icon-button id="reset-zoom" class="ink-fab" alt="Reset zoom to fit all points" icon="home"></paper-icon-button>
         <paper-tooltip for="reset-zoom" position="left" animation-delay="0">Reset zoom to fit all points</paper-tooltip>
