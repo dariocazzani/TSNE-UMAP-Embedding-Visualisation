@@ -3,8 +3,8 @@
         {
             "tensorName": "RIT",
             "tensorShape": [
-                250,
-                3
+                3979,
+                2048
             ],
             "tensorPath": "oss_data/tensor.bytes",
             "sprite": {
@@ -19,7 +19,7 @@
             "tensorName": "Visualisation",
             "tensorShape": [
                 17,
-                3
+                2048
             ],
             "tensorPath": "./oss_data/tensor.bytes",
             "sprite": {
@@ -34,7 +34,7 @@
             "tensorName": "Visualisation",
             "tensorShape": [
                 17,
-                3
+                2048
             ],
             "tensorPath": "./oss_data/tensor.bytes",
             "sprite": {
@@ -49,7 +49,7 @@
             "tensorName": "Visualisation",
             "tensorShape": [
                 17,
-                3
+                2048
             ],
             "tensorPath": "./oss_data/tensor.bytes",
             "sprite": {
@@ -64,7 +64,7 @@
             "tensorName": "Visualisation",
             "tensorShape": [
                 17,
-                3
+                2048
             ],
             "tensorPath": "./oss_data/tensor.bytes",
             "sprite": {
