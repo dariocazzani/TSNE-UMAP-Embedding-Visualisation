@@ -1,8 +1,8 @@
 from PIL import Image
 import glob
 from keras.applications.inception_v3 import InceptionV3
-from keras.applications.inception_v3 import preprocess_input
-from sklearn.decomposition import PCA
+from keras.applications.inception_v3 import preprocess_input, decode_predictions
+from keras.preprocessing import image
 import numpy as np
 import tensorflow as tf
 import click
@@ -81,8 +81,6 @@ def main(data, name, sprite_size, tensor_name, sprite_name, model_input_size):
 
     img_arr = populate_img_arr(images_paths, size=(model_input_size, model_input_size), should_preprocess=True)
     preds = model.predict(img_arr, batch_size=64)
-    pca = PCA(n_components=3)
-    preds = pca.fit_transform(preds)
     preds.tofile("./oss_data/" + tensor_name)
 
     raw_imgs = populate_img_arr(images_paths, size=(sprite_size, sprite_size), should_preprocess=False)
