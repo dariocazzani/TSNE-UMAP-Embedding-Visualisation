@@ -4,8 +4,11 @@ from keras.applications.inception_v3 import InceptionV3
 from keras.applications.inception_v3 import preprocess_input, decode_predictions
 from keras.preprocessing import image
 import numpy as np
+import tensorflow as tf
 import click
 import json
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
 
 
 def images_to_sprite(data):
@@ -49,8 +52,8 @@ def populate_img_arr(images_paths, size=(100, 100), should_preprocess=False):
     """
     arr = []
     for i, img_path in enumerate(images_paths):
-        img = image.load_img(img_path, target_size=size)
-        x = image.img_to_array(img)
+        img = tf.keras.preprocessing.image.load_img(img_path, target_size=size)
+        x = tf.keras.preprocessing.image.img_to_array(img)
         arr.append(x)
     arr = np.array(arr)
     if should_preprocess:
