@@ -3,7 +3,7 @@
         {
             "tensorName": "RIT",
             "tensorShape": [
-                3979,
+                250,
                 2048
             ],
             "tensorPath": "oss_data/tensor.bytes",
